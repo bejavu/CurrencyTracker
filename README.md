@@ -9,8 +9,9 @@ Using the button you can switch between currencies to track and a rotating betwe
 Long press the button will reset the device and its settings (wifi network and currencies list).
 
 ## Parts needed:
-* Assembled Adafruit Feather HUZZAH with ESP8266 WiFi With Headers, [can be found here][feather]
+* Assembled Adafruit Feather HUZZAH with ESP8266 WiFi With Headers, [can be found here][feather].
 * Micro servo.
+* I2C LCD 16X2.
 * Simple button.
 * 4 LEDs, 2 red LEDs, two green LEDs.
 * Optional: Lithium Ion Polymer Battery - 3.7v
