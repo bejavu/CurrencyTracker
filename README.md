@@ -1,11 +1,11 @@
-# CurrencyTracker
-### Arduino project for currency tacker
+# Currency Tracker
+### Arduino project for Currency Tacker real Desktop widget
 
-This Currency tracker is connected automatically to a WiFI network or create a new AP for quering the user for its SSID and Password along with a list of currencies to track.
+This Currency Tracker is connected automatically to a WiFI network or create a new AP for quering the user for its SSID and Password along with a list of currencies to track.
 After Its connected It will show on the screen the current price (in usd and btc) and 24 hour change of the selected currency.
-The Servo engine will rotate the arrow to indicate the change (-20%-20% change maps to 0 - 180 degrees).
+The Servo engine will rotate the arrow to indicate the last 24 hours price change (-20%-20% change maps to 0 - 180 degrees).
 The green\red LEDs will lit if the change is grater than\lower that zero.
-Using the button you can switch between currencies to track and a rotating between all currencies mode.
+Using the button a user can switch between currencies to track and a "rotate between all currencies" mode.
 Long press the button will reset the device and its settings (wifi network and currencies list).
 
 ## Parts needed:
@@ -28,8 +28,8 @@ you will need to install these libraries:
 
 Than Compile and upload the code from: `currencyTracker.ino`.
 
-## Put in in a box:
-You can print a 3D box and arrow for this and make a real desktop Currency Tracker.
+## Put it in a box:
+You can print a 3D box and a arrow for this to make a real desktop Currency Tracker widget.
 Solid sketch will be uploaded soon.
 
 

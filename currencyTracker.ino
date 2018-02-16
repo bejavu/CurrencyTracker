@@ -50,7 +50,7 @@ String currencies_str = "Bitcoin,Ethereum,ZCash,Dragonchain";
 
 // String currencies[] = {"Bitcoin", "Ethereum", "ZCash", "Dragonchain"};
 String *currencies;
-int currencies_length = 0;
+int currenciesLength = 0;
 
 
 int currencyIndex = 0;
@@ -80,15 +80,17 @@ WiFiManager wifiManager;
 
 void split_currencies(String currencies_str) {
   int index = 0;
-  currencies_length = 1;
+  currenciesLength = 1;
   while((index = currencies_str.indexOf(',', index + 1)) != -1) {
-    currencies_length++;
+    currenciesLength++;
   }
 
-  currencies = new String[currencies_length];
+  currencyIndex = currenciesLength;
+
+  currencies = new String[currenciesLength];
 
   int start = 0;
-  for (int i = 0; i < currencies_length; i++) {
+  for (int i = 0; i < currenciesLength; i++) {
     index = currencies_str.indexOf(',', start);
     if (start != -1) {
       currencies[i] = currencies_str.substring(start, index);
@@ -254,7 +256,7 @@ void handleInterrupt() {
           // Serial.println("SORT PRESS");
           interrupted = true;
           currencyIndex++;
-          currencyIndex = currencyIndex % (currencies_length + 1);
+          currencyIndex = currencyIndex % (currenciesLength + 1);
           StartUp();
         }
       }
@@ -286,9 +288,9 @@ void StartUp()
   lcd.clear();
   lcd.print("Tracking");
   lcd.setCursor(0,1);
-  Serial.print("currencies_length: ");
-  Serial.println(currencies_length);
-  if (currencyIndex < currencies_length) {
+  Serial.print("currenciesLength: ");
+  Serial.println(currenciesLength);
+  if (currencyIndex < currenciesLength) {
     currentCurrency = currencyIndex;
     lcd.print(currencies[currentCurrency]);
   } else {
@@ -481,9 +483,9 @@ void RunCurrencyTracker()
   }
   Serial.println("updateHardware");
   updateHardware();
-  if (currencyIndex == currencies_length) {
+  if (currencyIndex == currenciesLength) {
     currentCurrency++;
-    currentCurrency = (currentCurrency % currencies_length); 
+    currentCurrency = (currentCurrency % currenciesLength); 
   }
 }
 
