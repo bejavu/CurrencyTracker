@@ -17,7 +17,7 @@ Long press the button will reset the device and its settings (wifi network and c
 * Optional: Lithium Ion Polymer Battery - 3.7v
 
 ## Connect it all together:
-![Currency Tracker](https://github.com/bejavu/CurrencyTracker/raw/master/CurrenctTracker_bb.png)
+![Currency Tracker](https://github.com/bejavu/CurrencyTracker/raw/master/CurrencyTracker_bb.png)
 
 ## Deploy the code:
 you will need to install these libraries:
